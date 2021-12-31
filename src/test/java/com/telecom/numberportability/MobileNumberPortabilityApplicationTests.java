@@ -1,4 +1,4 @@
-package com.GTSS.mobilenumberPortability;
+package com.telecom.numberportability;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

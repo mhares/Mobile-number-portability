@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "fromOrganization": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "startRange": {
+          "type": "integer"
+        },
+        "endRange": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "startRange",
+        "endRange"
+      ]
+    },
+    "toOrganization": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "startRange": {
+          "type": "integer"
+        },
+        "endRange": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "startRange",
+        "endRange"
+      ]
+    },
+    "requestDate": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "phoneNumber"
+  ]
+}
