@@ -17,10 +17,10 @@ public class Request {
 	private String phoneNumber;
 
 	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
-	@JoinColumn(name = "from_organiztion_id")
+	@JoinColumn(name = "from_organization_id")
 	private Organization fromOrganization;
 	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
-	@JoinColumn(name = "to_organiztion_id")
+	@JoinColumn(name = "to_organization_id")
 	private Organization toOrganization;
 
 	private Date requestDate ;

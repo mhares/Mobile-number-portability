@@ -19,11 +19,11 @@ public interface RequestRepository extends JpaRepository<Request,Integer> {
 	public List<Request> findAllPendingRequests();
 
 	// Fetch All Pending Requests That An Organization Needs to perform An Action (DONOR)
-	@Query(value = "SELECT * FROM  request WHERE status = 'pending' AND from_organiztion_id= ?1",nativeQuery = true)
+	@Query(value = "SELECT * FROM  request WHERE status = 'pending' AND from_organization_id= ?1",nativeQuery = true)
 	public  List<Request> findAllPendingRequestsFromOrganization(int id);
 
 	// Fetch All Pending Requests that an Organization Made ( Recipient )
-	@Query(value = "SELECT * FROM  request WHERE status = 'pending' AND to_organiztion_id= ?1",nativeQuery = true)
+	@Query(value = "SELECT * FROM  request WHERE status = 'pending' AND to_organization_id= ?1",nativeQuery = true)
 	public  List<Request> findAllPendingRequestsToOrganization(int id);
 
 	// Check if I have a Pending Request For the same Number
